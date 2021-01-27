@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNVBHKM678');
+</script>
+  </head>
+  <body>
+    <h1><a href="index.html">코딩 공부</a></h1>
+    <div id="grid">
+      <ul id="list">
+        <li><a href="HTML.html">HTML</a></li>
+        <li><a href="CSS.html">CSS</a></li>
+        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+          <ul>
+            <li><a href="ex_js.html">예제</a></li>
+          </ul>
+      </ul>
+    <div id="article">
+      <h2>만남1 - script태그</h2>
+      <h3>script</h3>
+      아래는 스크립트로 1+1의 결과.<br>
+      <script>
+        document.write(1+1);
+      </script>
+      <h3>html</h3>
+      <p>
+        아래는 html로 1+1의 결과.<br>
+        1+1
+      </p>
+      <h2>만남2 - event</h2>
+      <p>
+        웹페이지에서 쓸만한 10~20개의 event를 정의해놨다. 그걸 이용해 사용자와 상호작용하는 웹페이지를 만들 수 있다.
+      </p>
+      <ul>
+        <img src="javascrpit001.png" width="500px"><br>
+        <li><input type="button" value="hi" onclick="alert('hi')"> 경고창을 표시하는 alert코드. input JavaScript로 누르면 경고창이 뜨게 만듦.<le>
+          <li><input type="text" onchange="alert('changed')">
+        내용이 변했을 때를 체크하는 이벤트 onchange</li>
+        칸에서 text입력 후 커서가 빠져나오면 실행됨. a를 적었다 다시 지운 뒤 커서가 나오면 실행되지 않음.
+          <li><input type="text" onkeydown="alert('key down!')">
+        키를 누를 때를 체크하는 이벤트 onkeydown</li>
+        키를 누르면 alert<br>
+        검색 javascript keydown event attribute
+      </ul>
+      <h2>만남3 - CONSOLE</h2>
+      <p>
+        웹페이지, 파일을 만들었다. 근데 파일이 아니어도 어떤 코드를 실행해야되는 가벼운 사항들이 있다. 그럴 때 콘솔을 사용한다. 개발자도구에 가면 console이 있는데 여기서 파일을 사용하지 않고도 자바스크립트를 사용할 수 있다. 이때 자바스크립트는 웹페이지에서 실행되는 방식으로 적용된다.<br>
+        '가나다라'.length는 문자 수를 세 준다.
+      </p>
+      <h2>데이터타입 - 문자열과 숫자</h2>
+      <p>
+        데이터타입, 한국말로 자료형. 검색 JavaScript data type.<br>
+        number 숫자, string 문자열.<br>
+        javascrpit 문자열에 사용할 수 있는 명령어 검색 키워드. javascript string. 모질라 운영 웹페이지 추천.<br>
+        쌍따옴표나 따옴표로 감싸면 문자열이 된다.
+      </p>
+      <h2>변수와 대입 연산자</h2>
+      <p>
+        x, y, name 등은 변수. 정해져있다.<br>
+        = 는 대입 연산자<br>
+        바뀌지 않는 숫자 = 상수 = 1은 계속 1이다.<br>
+        <img src="name001.png" width="800px"><br>
+        var 베리어블 안붙여도 되나 붙이는 게 좋은 습관.
+      </p>
+      <h2>웹브라우저 제어 - 제어할 태그 선택하기</h2>
+      <p>
+        자바스크립트로 선택자 태그를 검색 javascript select tag by css Selector<br>
+        ".myclass" 이건 class="myclass"를 선택한다.<br>
+        document. 이 문서에서
+        document.query 질의하다<br>
+        document.querySelector CSS의 셀렉터에게 질의하다.<Br>
+        document.querySelector('body') 바디 태그에게 질의한다.<br>
+        혹은 document.querySelector('#body') 클래스 선택자 body에게 질의한다.
+      </p>
+      <p>
+        자바스크립트로 속성을 어떻게 넣는지 검색 javascript element style<br>
+        querySelector('body').style 바디 태그에게 스타일을 적용을 질의한다.<br>
+        자바스크립트로 CSS로 배경색을 어떻게 넣는지 검색 JavaScript background color<br>
+        querySelector('body').style.backgroundColor = "black"; 바디 태그에게 스타일을 적용하는데 배경색을 검정색으로 한다.<br>
+      </p>
+      <h2>자바스크립트란?</h2>
+      <p>
+        html 자바스크립트는 둘 다 컴퓨터 언어다.<br>
+        자바스크립트는 동시에 컴퓨터 프로그래밍 언어다.<br>
+        html은 컴퓨터 프로그래밍 언어라고 하지는 않는다.<br>
+        음악회는 시작하고 끝날때까지 순서가 있다. 이런 순서를 프로그램이라고 했고 프로그램에는 순서라는 개념이 들어가야한다. html은 단지 웹페이지를 표현하기만 하면 된다. 순서가 필요 없다. 자바스크립트는 조건이나 시간 순서에 따라 어떤 일을 하기 때문에 프로그래밍이다.
+      <h2>조건문</h2>
+      <p>
+        하나의 프로그램이 하나의 흐름이 아니라 조건에 따라서 다른 순서의 기능들이 실행되도록 하는 것.<br>
+        프로그래밍을 통해 반복적인 일을 하지 않게 됐다면 조건문을 통해 아주 복잡한 업무까지 간단하게 만드는 것.<br>
+        toggle 기능. 한 버튼으로 검게 했다 희게 했다 하는 것.
+    </div>
+  </body>
+</html>

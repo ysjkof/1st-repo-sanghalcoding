@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>코딩 공부</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNVBHKM678');
+</script>
+  </head>
+  <body>
+    <h1><a href="index.html">코딩 공부</a></h1>
+    <div id="grid">
+      <ul id="list">
+        <li><a href="HTML.html">HTML</a></li>
+        <li><a href="CSS.html">CSS</a></li>
+        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+          <ul>
+            <li><a href="ex_js.html">예제</a></li>
+          </ul>
+      </ul>
+      <div id="article">
+        <h2>나무위키 개요</h2>
+        <p>
+          프로토타입기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다. 웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.
+        </p>
+        <p>
+          사용자와 상호작용하기 위함.
+          html은 정적이다. 한 번 표현되면 그대로 정지돼 있다.
+          정적인 웹페이지를 html로 만들면 거기에 JavaScript를 더해서 사용자와 상호작용할 수 있도록 한다.
+        </p>
+        <h2>상호작용 따라하기</h2>
+        <input type="button" value="NIGHT" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        var as = document.getElementsByTagName('a'); /* 이문서에서 태그이름 a를 찾아라. */
+        for(var i=0; i<as.length; i++){
+          as[i].style.color = 'white';
+        }
+        ">
+        <input type="button" value="DAY" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        var as = document.getElementsByTagName('a');
+        for(var i=0; i<as.length; i++){
+          as[i].style.color = 'black';
+        }
+        ">
+        쌍따옴표("") 안에는 따옴표('')를 쓴다.
+        <p>
+        input태그로 타입버튼 속성을 주면 버튼을 만든다. 밸류를 나이트로 주면 나이트를 내용으로 쓴다. 온클릭 속성에는 자바스크립트가 와야한다.
+      </p>
+      <p>
+        JavaScript는 script태그로 시작한다. 1+1을 입력하면 2로 나타내는 능력이 있다. html은 1+1이라고 쓰면 그대로 1+1로 나타난다.
+      </p>
+      </div>
+    </div>
+  </body>
+  </html>

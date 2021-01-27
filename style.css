@@ -1,0 +1,57 @@
+body{
+  margin:0px;
+}
+h2 {
+  text-align: center;
+}
+a{
+  color:black;
+  font-weight: bold;
+  text-decoration: none;
+}
+h1{
+  text-align: center;
+  border-bottom:1px solid gray;
+  padding:20px;
+  margin:0px;
+}
+#list{
+  text-align: left;
+  border-right:1px solid gray;
+  width:100px;
+  margin:0;
+  padding:20px;
+  list-style-type: none;
+}
+img{
+  border:1px solid red;
+  width: 500px;
+}
+div{
+  text-align: center;
+}
+#grid{
+  display:grid; /*grid 선택자의 보이는 형식을 grid로 바꿈.*/
+  grid-template-columns: 150px 1fr;
+}
+#grid ol{
+  padding-left:40px;
+}
+#article{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media(max-width:1000px){
+  #grid{
+    display:block;
+  }
+  #list{
+    display: block;
+    border-right:none;
+    border-bottom: 1px solid gray;
+    margin:auto;
+    padding-right:40px;
+  }
+  img{
+    width:400px;
+  }
