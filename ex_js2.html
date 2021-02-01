@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNVBHKM678');
+</script>
+  </head>
+  <body>
+    <h1><a href="index.html">코딩 공부</a></h1>
+    <div id="grid">
+      <ul id="list">
+        <li><a href="HTML.html">HTML</a></li>
+        <li><a href="CSS.html">CSS</a></li>
+        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+          <ul>
+            <li><a href="ex_js.html">예제</a></li>
+            <li><a href="ex_js2.html">조건문</a></li>
+            <li><a href="ex_js3.html">배열</a></li>
+          </ul>
+      </ul>
+    <div id="article">
+      <h2>조건문</h2>
+      <p>
+        하나의 프로그램이 하나의 흐름이 아니라 조건에 따라서 다른 순서의 기능들이 실행되도록 하는 것.<br>
+        프로그래밍을 통해 반복적인 일을 하지 않게 됐다면 조건문을 통해 아주 복잡한 업무까지 간단하게 만드는 것.<br>
+        toggle 기능. 한 버튼으로 검게 했다 희게 했다 하는 것.
+      </p>
+      <h2>비교 연산자와 블리언(Comparison operators & Boolean</h2>
+      <p>
+        이퀄(===)이라는 비교연산자는 Lt 항과 Rt 항의 관계에 따라서 true나 false, 둘 중 하나 값을 만들어내는 연산자다.<br>
+        트루와 폴스라는 두 가지 값을 묶어서 블리언이라고 부른다.<br>
+        Boolean은 True와 False 두 가지 값으로 된 데이터다.<br>
+        document.write(1---1); 이때는 true라는 값이 된다.<br>
+        document.write(1---2); 이때는 false라는 값이 된다.<br>
+      </p>
+      <p>
+        if뒤에 갈로에는 불리언이 온다. if뒤에 불리언이 true면 바로 뒤 코드를 실행하고 false면 else안에 코드를 실행한다.
+        꺽쇠라는 문법이기 때문에 &lt;를 쓴다.
+      </p>
+      <p>
+        밤모드<input type="button" value="NIGHT" onclick="
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          var as = document.getElementsByTagName('a'); /* 이문서에서 태그이름 a를 찾아라. */
+          for(var i=0; i<as.length; i++){
+            as[i].style.color = 'white';
+          }
+        ">
+        낮모드<input type="button" value="DAY" onclick="
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          var as = document.getElementsByTagName('a');
+          for(var i=0; i<as.length; i++){
+            as[i].style.color = 'black';
+          }
+        "><br>
+        버튼하나로 if사용 <input id="night_day" type="button" value="night" onclick="
+          if(document.querySelector('#night_day').value === 'night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#night_day').value = 'day';
+        } else {
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#night_day').value = 'night';
+        }
+        ">
+      </p>
+      <h2>리팩토링. 중복의 제거</h2>
+        중복되는 코드를 제거하고 최적화 하는 것.<br>
+        <p>input id="night_day" type="button" value="night" onclick="<br>
+          if(document.querySelector('#night_day').value === 'night'){<br>
+          document.querySelector('body').style.backgroundColor='black';<br>
+          id셀렉터를 지우고 this를 사용해서 길이를 줄이고 같은 버튼을 여러개 배치할 수 있다.<br><br>
+
+          input type="button" value="night" onclick="<br>
+            if(this.value === 'night'){<br>
+            document.querySelector('body').style.backgroundColor='black';<br>
+            document.querySelector('body').style.color='white';<br>
+
+        중복줄이기1-this <input type="button" value="night" onclick="
+          if(this.value === 'night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          this.value = 'day';
+        } else {
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          this.value = 'night';
+        }
+        ">
+      </p>
+      <p>
+        var target=document.querySelector('body'); target은 document.~가 된다.<br>
+          if(this.value === 'night'){<br>
+          target.style.backgroundColor='black';<br>
+          target.style.color='white';<br>
+          this.value = 'day';<br>
+
+        중복줄이기2 <input type="button" value="night" onclick="
+        var target=document.querySelector('body');
+          if(this.value === 'night'){
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          this.value = 'day';
+        } else {
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          this.value = 'night';
+        }
+        ">
+      </p>
+    </div>
+  </body>
+</html>
