@@ -5,28 +5,36 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DNVBHKM678');
-</script>
+      gtag('config', 'G-DNVBHKM678');
+    </script>
+    <script src="js.js"></script>
   </head>
   <body>
     <h1><a href="index.html">코딩 공부</a></h1>
     <div id="grid">
       <ul id="list">
-        <li><a href="HTML.html">HTML</a></li>
-        <li><a href="CSS.html">CSS</a></li>
-        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        <div>
+          <li><a href="HTML.html">HTML</a></li>
+          <li><a href="CSS.html">CSS</a></li>
+          <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        </div>
+        <div>
           <ul>
             <li><a href="ex_js.html">예제</a></li>
             <li><a href="ex_js2.html">조건문</a></li>
             <li><a href="ex_js3.html">배열</a></li>
+            <li><a href="ex_js4.html">매개변수, 인자, 리턴</a></li>
+            <li><a href="ex_js5.html">객체</a></li>
+            <li><a href="allbt.html">모든 버튼</a></li>
           </ul>
-      </ul>
+        </div>
+        </ul>
     <div id="article">
       <h2>배열 Array</h2>
       <p>
@@ -73,11 +81,11 @@
           desti.style.color='white';
           this.value = 'DAY'
 
-          var alist=document.querySelectorAll('a'); /* 이 문서에서 모든 a태그를 선택자를 변수 alist로 한다.*/
-          var i = 0; /* 변수 i의 값은 0이다. */
-          while(i<alist.length){ /* 반복을 하는데 alist변수의 갯수보다 작을때까지 동안 반복한다.*/
+          var alist=document.querySelectorAll('a'); // 이 문서에서 모든 a태그를 선택자를 변수 alist로 한다.
+          var i = 0; // 변수 i의 값은 0이다.
+          while(i<alist.length){ // 반복을 하는데 alist변수의 갯수보다 작을때까지 동안 반복한다.
             alist[i].style.color = 'powderblue'; /*뭘 반복하냐면 alist 배열의 변수 i를 CSS로 글자색을 바꾼다.*/
-            i=i+1;  /*변수 i는 1을 더한다*/
+            i=i+1;  // 변수 i는 1을 더한다
           }
         } else{
           desti.style.backgroundColor='white';
@@ -91,8 +99,7 @@
             i=i+1;
           }
         }
-
-        ">
+        "> 자바스크립트만 이용한 버튼.<br>
       </p>
     </div>
   </body>

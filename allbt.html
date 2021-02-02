@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DNVBHKM678');
+      </script>
+    <title>코딩 공부</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function nightDayHandler(self){
+      var desti=document.querySelector('body');
+      if(self.value === 'NIGHT'){
+        desti.style.backgroundColor='black';
+        desti.style.color='white';
+        self.value = 'DAY'
+
+        var alist=document.querySelectorAll('a'); /* 이 문서에서 모든 a태그를 선택자를 변수 alist로 한다.*/
+        var i = 0; /* 변수 i의 값은 0이다. */
+        while(i<alist.length){ /* 반복을 하는데 alist변수의 갯수보다 작을때까지 동안 반복한다.*/
+          alist[i].style.color = 'powderblue'; /*뭘 반복하냐면 alist 배열의 변수 i를 CSS로 글자색을 바꾼다.*/
+          i=i+1;  /*변수 i는 1을 더한다*/
+        }
+      } else{
+        desti.style.backgroundColor='white';
+        desti.style.color='black';
+        self.value = 'NIGHT'
+
+        var alist=document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+          alist[i].style.color = 'black';
+          i=i+1;
+        }
+      }}
+    </script>
+  </head>
+  <body>
+    <h1><a href="index.html">코딩 공부</a></h1>
+    <div id="grid">
+      <ul id="list">
+        <div>
+          <li><a href="HTML.html">HTML</a></li>
+          <li><a href="CSS.html">CSS</a></li>
+          <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        </div>
+        <div>
+          <ul>
+            <li><a href="ex_js.html">예제</a></li>
+            <li><a href="ex_js2.html">조건문</a></li>
+            <li><a href="ex_js3.html">배열</a></li>
+            <li><a href="ex_js4.html">매개변수, 인자, 리턴</a></li>
+            <li><a href="ex_js5.html">객체</a></li>
+            <li><a href="allbt.html">모든 버튼</a></li>
+          </ul>
+        </div>
+        </ul>
+      <div id="article">
+        <h2>밤 낮 화면 전환</h2>
+          밤모드 <input type="button" value="NIGHT" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            var as = document.getElementsByTagName('a'); /* 이문서에서 태그이름 a를 찾아라. */
+            for(var i=0; i<as.length; i++){
+              as[i].style.color = 'white';
+            }
+          "><br><br>
+          낮모드 <input type="button" value="DAY" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            var as = document.getElementsByTagName('a');
+            for(var i=0; i<as.length; i++){
+              as[i].style.color = 'black';
+            }
+          ">
+        <h2>버튼 한 개로 하기</h2>
+        버튼 하나로 전환하기 - if <input id="night_day" type="button" value="night" onclick="
+          if(document.querySelector('#night_day').value === 'night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#night_day').value = 'day';
+        } else {
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#night_day').value = 'night';
+        }
+        "><br><br>
+        중복줄이기1 - this <input type="button" value="night" onclick="
+            if(this.value === 'night'){ //this는 이 이벤트가 소속된 태그를 가리키도록 약속돼 있음. 독립된 함수를 만들게 되면 이 this는 input버튼이 아니고 전역개체를 가리킨다. 웹브라우저에서는 윈도우가됨. 이해불가. 넘어가.
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            this.value = 'day';
+          } else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            this.value = 'night';
+          }
+          "><br><br>
+          중복줄이기2 - 변수 지정 <input type="button" value="night" onclick="
+        var target=document.querySelector('body'); //target은 document.~가 된다. 변수정함.
+          if(this.value === 'night'){
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          this.value = 'day';
+        } else {
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          this.value = 'night';
+        }
+        ">
+        <h2>버튼 한 개로 하기</h2>
+        <input type="button" value="NIGHT" onclick="
+          var desti=document.querySelector('body');
+          if(this.value === 'NIGHT'){
+            desti.style.backgroundColor='black';
+            desti.style.color='white';
+            this.value = 'DAY'
+
+            var alist=document.querySelectorAll('a'); // 이 문서에서 모든 a태그를 선택자를 변수 alist로 한다.
+            var i = 0; // 변수 i의 값은 0이다.
+            while(i<alist.length){ // 반복을 하는데 alist변수의 갯수보다 작을때까지 동안 반복한다.
+              alist[i].style.color = 'powderblue'; /*뭘 반복하냐면 alist 배열의 변수 i를 CSS로 글자색을 바꾼다.*/
+              i=i+1;  // 변수 i는 1을 더한다
+            }
+          } else{
+            desti.style.backgroundColor='white';
+            desti.style.color='black';
+            this.value = 'NIGHT'
+
+            var alist=document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+              alist[i].style.color = 'black';
+              i=i+1;
+            }
+          }
+          "> 자바스크립트만 이용한 버튼.
+      <h2>함수를 사용해서</h2>
+        <input type="button" value="NIGHT" onclick="
+          nightDayHandler(this);
+        ">
+      </div>
+    </div>
+  </body>
+  </html>

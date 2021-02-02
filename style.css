@@ -5,7 +5,7 @@ h2 {
   text-align: center;
 }
 a{
-  color:black;
+  color:gray;
   font-weight: bold;
   text-decoration: none;
 }
@@ -16,26 +16,30 @@ h1{
   margin:0px;
 }
 #list{
-  text-align: left;
   border-right:1px solid gray;
-  width:100px;
+  width:130px;
   margin:0;
   padding:20px;
   list-style-type: none;
 }
 img{
+  display: block;
+  margin:0px auto;
   border:1px solid red;
   width: 500px;
 }
 div{
   text-align: center;
 }
+li{
+  text-align: left;
+}
+ul{
+  padding-left: 25px;
+}
 #grid{
   display:grid; /*grid 선택자의 보이는 형식을 grid로 바꿈.*/
   grid-template-columns: 150px 1fr;
-}
-#grid ol{
-  padding-left:40px;
 }
 #article{
   padding-left: 40px;
@@ -46,15 +50,24 @@ div{
     display:block;
   }
   #list{
-    display: block;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     border-right:none;
     border-bottom: 1px solid gray;
-    margin:auto;
-    padding-right:40px;
+    margin:0px auto;
+    padding-right:0px;
+    width:70%;
+    padding:10px;
+  }
+  #list div{
+    width:120px auto;
+  }
+  ul{
+    padding:0;
   }
   img{
     width:400px;
   }
-  body{
-    font-size: 35px;
+  #article{
+    padding:0;
   }

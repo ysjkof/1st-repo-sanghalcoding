@@ -5,28 +5,36 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DNVBHKM678');
-</script>
+      gtag('config', 'G-DNVBHKM678');
+    </script>
+    <script src="js.js"></script>
   </head>
   <body>
     <h1><a href="index.html">코딩 공부</a></h1>
     <div id="grid">
       <ul id="list">
-        <li><a href="HTML.html">HTML</a></li>
-        <li><a href="CSS.html">CSS</a></li>
-        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        <div>
+          <li><a href="HTML.html">HTML</a></li>
+          <li><a href="CSS.html">CSS</a></li>
+          <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        </div>
+        <div>
           <ul>
             <li><a href="ex_js.html">예제</a></li>
             <li><a href="ex_js2.html">조건문</a></li>
             <li><a href="ex_js3.html">배열</a></li>
+            <li><a href="ex_js4.html">매개변수, 인자, 리턴</a></li>
+            <li><a href="ex_js5.html">객체</a></li>
+            <li><a href="allbt.html">모든 버튼</a></li>
           </ul>
-      </ul>
+        </div>
+        </ul>
     <div id="article">
       <h2>조건문</h2>
       <p>
@@ -97,7 +105,8 @@
           document.querySelector('body').style.color='black';
           this.value = 'night';
         }
-        ">
+        "><br>
+        this는 이 이벤트가 소속된 태그를 가리키도록 약속돼 있음. 독립된 함수를 만들게 되면 이 this는 input버튼이 아니고 전역개체를 가리킨다. 웹브라우저에서는 윈도우가됨. 이해불가. 넘어가.
       </p>
       <p>
         var target=document.querySelector('body'); target은 document.~가 된다.<br>

@@ -5,27 +5,35 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNVBHKM678"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DNVBHKM678');
-</script>
+      gtag('config', 'G-DNVBHKM678');
+    </script>
+    <script src="js.js"></script>
   </head>
   <body>
     <h1><a href="index.html">코딩 공부</a></h1>
     <div id="grid">
       <ul id="list">
-        <li><a href="HTML.html">HTML</a></li>
-        <li><a href="CSS.html">CSS</a></li>
-        <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        <div>
+          <li><a href="HTML.html">HTML</a></li>
+          <li><a href="CSS.html">CSS</a></li>
+          <li style="font-size:25px;"><a href="JavaScript.html">JavaScript</a></li>
+        </div>
+        <div>
           <ul>
             <li><a href="ex_js.html">예제</a></li>
             <li><a href="ex_js2.html">조건문</a></li>
             <li><a href="ex_js3.html">배열</a></li>
+            <li><a href="ex_js4.html">매개변수, 인자, 리턴</a></li>
+            <li><a href="ex_js5.html">객체</a></li>
+            <li><a href="allbt.html">모든 버튼</a></li>
           </ul>
+        </div>
       </ul>
     <div id="article">
       <h2>만남1 - script태그</h2>
@@ -64,7 +72,10 @@
         데이터타입, 한국말로 자료형. 검색 JavaScript data type.<br>
         number 숫자, string 문자열.<br>
         javascrpit 문자열에 사용할 수 있는 명령어 검색 키워드. javascript string. 모질라 운영 웹페이지 추천.<br>
-        쌍따옴표나 따옴표로 감싸면 문자열이 된다.
+        쌍따옴표나 따옴표로 감싸면 문자열이 된다.<br><br>
+        함수의 ()안에는 변수, 숫자, 문자열이 들어갈 수 있다. 변수나 숫자는 따옴표를 치면 안된다. 문자열은 따옴표를 쳐야 한다.<br>
+        document.write(left+right+'br>') left, right는 변수기 때문에 따옴표가 없지만 &lt;br>은 자바스크립트에서 아무 의미가 없는 html 태그라 문자열로 취급해 ''를 붙인다.<br>
+        만약 'left'+'right'하게 되면 문자열끼리 더하라는 뜻이므로 leftright라고 출력된다.
       </p>
       <h2>변수와 대입 연산자</h2>
       <p>
